@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block head %}
+<title>404 Not Found</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.css" integrity="sha512-9iWaz7iMchMkQOKA8K4Qpz6bpQRbhedFJB+MSdmJ5Nf4qIN1+5wOVnzg5BQs/mYH3sKtzY+DOgxiwMz8ZtMCsw==" crossorigin="anonymous" />
+<style>
+    body{
+        margin: 0;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background: #f54ea2;
+        background: -webkit-linear-gradient(to right, #f54ea2, #ff7676);
+        background: linear-gradient(to right, #f54ea2, #ff7676);
+    }
+    .container{
+        width: 70%;
+        height: 80%;
+        box-sizing: border-box;
+        background-color: white;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 1rem;
+        box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.25);
+    }
+    .logo{
+
+    }
+    .logo > i{
+        font-size: 5rem;
+        background: -webkit-linear-gradient( #f54ea2, #ff7676);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .not-found{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .not-found > span{
+        font-size: 5rem;
+        background: -webkit-linear-gradient( #c9116d, #f75050);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .footer{
+
+    }
+    .footer > span{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    a{
+        text-decoration: none;
+        background: -webkit-linear-gradient( #c04d86, #f75050);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+</style>
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <div class="logo">
+            <i class="fas fa-question"></i>
+        </div>
+        <div class="not-found">
+            <span>Page not found.</span>
+        </div>
+        <div class="footer">
+            <span>Go back to <a href="/"><i class="fas fa-home"></i> Home</a></span>
+        </div>
+    </div>
+{% endblock %}

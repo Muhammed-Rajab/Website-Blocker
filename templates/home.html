@@ -1,0 +1,51 @@
+{% extends "base.html" %} {% block head %}
+<title>Home</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.css" integrity="sha512-9iWaz7iMchMkQOKA8K4Qpz6bpQRbhedFJB+MSdmJ5Nf4qIN1+5wOVnzg5BQs/mYH3sKtzY+DOgxiwMz8ZtMCsw==" crossorigin="anonymous" />
+<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}"> {% endblock %} {% block body %}
+<div class="container">
+    <div class="main-wrapper">
+        <section class="left-section">
+            <h1 id="btn-left-section-1"><a href="#"><i class="fas fa-plus"></i> Add</a></h1>
+            <h1 id="btn-left-section-2"><a href="#"><i class="fa fa-minus" aria-hidden="true"></i> Remove</a></h1>
+            <h1 id="btn-left-section-3"><a href="#"><i class="fas fa-edit"></i> Edit</a></h1>
+            <h1 id="btn-left-section-4"><a href="#"><i class="fas fa-info-circle"></i> Dev</a></h1>
+            <!-- <h1  id="btn-left-section-5"><a href="#">Button</a></h1> -->
+            <!-- <h1  id="btn-left-section-6"><a href="#">Button</a></h1> -->
+        </section>
+        <section class="right-section">
+            <div class="right-section-1 right-section-child">
+                <form>
+                    <input placeholder="Enter website URL to block" required>
+                    <button type="submit">Add to black list</button>
+                </form>
+                <div class="result">
+
+                </div>
+            </div>
+            <div class="right-section-2 right-section-child">
+                <div class="links-to-remove-wrapper">
+
+                </div>
+                <button class="buttonInsideSection2">Unblock Sites</button>
+            </div>
+            <div class="right-section-3 right-section-child">
+                <span>This functionality will be implemented soon.</span>
+            </div>
+            <div class="right-section-4 right-section-child">
+                <div class="dp">
+
+                </div>
+                <div class="name">
+                    <h1>John Doe</h1>
+                </div>
+                <div class="bio">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est dolor, distinctio obcaecati cupiditate fuga voluptas eligendi facilis minus sequi eum. Sint similique fuga placeat esse tempora rem. Debitis ipsam optio molestiae consequatur.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}

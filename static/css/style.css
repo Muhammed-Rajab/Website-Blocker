@@ -1,0 +1,271 @@
+body {
+    margin: 0;
+    background: #f54ea2;
+    background: -webkit-linear-gradient(to right, #f54ea2, #ff7676);
+    background: linear-gradient(to right, #f54ea2, #ff7676);
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    /* background-color: white; */
+    width: 80%;
+    height: 85%;
+}
+
+.main-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 11px;
+    box-shadow: 0px 0px 5px 6px rgb(0 0 0 / 10%);
+    background-color: white;
+}
+
+.left-section {
+    height: fit-content;
+    border-radius: 10px 0px 0px 10px;
+    display: flex;
+    flex-direction: row;
+    /* background-color: rgba(0, 0, 0, 0.025); */
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 0rem 1rem 0rem 1rem;
+}
+
+.right-section {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 0px 10px 10px;
+    /* display: flex; */
+    position: relative;
+}
+
+
+/* The main design starts now. */
+
+
+/* Left section testing */
+
+.left-section>h1 {
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    padding: 0.75rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem 1rem 1rem 1rem;
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.2);
+}
+
+.left-section>h1>a {
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: #f53093;
+}
+
+.left-section>h1:hover {
+    background-color: rgb(250, 250, 250) !important;
+}
+
+
+/* Left Section Over */
+
+
+/* Rigth section starts */
+
+.right-section-child {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-section-child>h1 {
+    color: white;
+    font-size: 10rem;
+    font-family: "Courier New", Courier, monospace;
+}
+
+
+/* Add website section */
+
+.right-section-1 {
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+    box-sizing: border-box;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.right-section-1>form {
+    width: 90%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-section-1 *:focus {
+    outline: none;
+}
+
+.right-section-1>form>input {
+    width: 100%;
+    height: 2.5rem;
+    border: none;
+    border-radius: 7px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.199);
+}
+
+.right-section-1>form>button {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    width: fit-content;
+    border: none;
+    border-radius: 7px;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.199);
+}
+
+.right-section-1>form>button:hover {
+    background-color: rgb(189, 189, 189);
+}
+
+.result {
+    width: 100%;
+    position: absolute;
+    bottom: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result>span {
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    font-size: 1rem;
+}
+
+
+/* Remove website section */
+
+.right-section-2 {
+    background-color: white;
+}
+
+.links-to-remove-wrapper {
+    /* width: 80%; */
+    height: 100%;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 2rem;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.links-to-remove-wrapper>div {
+    background-color: rebeccapurple;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+/* .link-to-remove {} */
+
+.checkbox {
+    border-radius: 0%;
+}
+
+.label {
+    color: black;
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.buttonInsideSection2 {
+    position: absolute;
+    bottom: 2%;
+    width: 98%;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 0px 0px 7px 7px;
+    border: none;
+    height: 2rem;
+    background-color: #f54ea2;
+    color: white;
+}
+
+.buttonInsideSection2:focus {
+    outline: none;
+}
+
+.buttonInsideSection2:hover {
+    background-color: #f53093;
+}
+
+
+/* Edit files section */
+
+.right-section-3 {
+    background-color: white;
+}
+
+.right-section-3>span {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+}
+
+
+/* Dev section */
+
+.right-section-4 {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all;
+    transition-duration: 2s;
+}
+
+.dp {
+    width: 128px;
+    height: 128px;
+    background-color: #e94a4a;
+    border-radius: 100%;
+}
+
+
+/* .dp>img {} */
+
+
+/* .name {} */
+
+.name>h1 {
+    color: #f53093;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.bio {
+    width: 80%;
+}
+
+.bio>p {
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+}

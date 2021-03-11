@@ -126,16 +126,6 @@ def redirected_page():
 @app.route("/hosts", methods=["GET"])
 def return_hosts():
     if request.method == "GET":
-        # with open("/etc/hosts", "r") as hosts:
-        #     count = 0
-        #     for lines in hosts.readlines():
-        #         if lines[0].strip() == "#" or lines == "\n":
-        #             continue
-        #         else:
-        #             lines = lines.split()
-        #             links[count] = lines[-1]
-        #             count += 1 
-
         return get_links_from_hosts()
 
 

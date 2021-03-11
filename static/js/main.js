@@ -3,19 +3,22 @@ const btnLeftSection1 = document.querySelector("#btn-left-section-1");
 const btnLeftSection2 = document.querySelector("#btn-left-section-2");
 const btnLeftSection3 = document.querySelector("#btn-left-section-3");
 const btnLeftSection4 = document.querySelector("#btn-left-section-4");
+// Setting the initial z-index for firsts section
 let ZIndex = 2;
+
 // Selecting sections for adding and removing
 const rightSection1 = document.querySelector(".right-section-1");
 const rightSection2 = document.querySelector(".right-section-2");
 const rightSection3 = document.querySelector(".right-section-3");
 const rightSection4 = document.querySelector(".right-section-4");
 
+// Adding event listener to section one
 btnLeftSection1.addEventListener("click", function() {
-    console.log("I am section One");
     rightSection1.style.zIndex = ZIndex;
     ZIndex = ZIndex + 1;
 });
 
+// Code to refresh the second section links pages
 function refreshSectionTwo() {
 
     let xhttp = new XMLHttpRequest();
@@ -49,54 +52,23 @@ function refreshSectionTwo() {
     xhttp.send();
 }
 
+// Adding event listener to section two
 btnLeftSection2.addEventListener("click", function() {
     console.log("I am section Two");
     rightSection2.style.zIndex = ZIndex;
     ZIndex = ZIndex + 1;
 
-    // // Getting links already blocked in hosts file
-    // let xhttp = new XMLHttpRequest();
-
-    // let linksToRemoveWrapper = document.querySelector(".links-to-remove-wrapper");
-
-    // xhttp.onreadystatechange = function() {
-    //     if (this.readyState == 4 && this.status == 200) {
-    //         console.log(this.responseText);
-    //         let responseTextFromServer = JSON.parse(this.responseText);
-
-    //         linksToRemoveWrapper.innerHTML = "";
-    //         let form = document.createElement("form");
-    //         form.className = "formInsideLinksToRemoveWrapper";
-    //         for (const key in responseTextFromServer) {
-    //             let checkbox = document.createElement("input");
-    //             checkbox.type = "checkbox";
-    //             checkbox.value = key;
-    //             checkbox.className = "checkbox";
-    //             let label = document.createElement("label");
-    //             label.innerText = responseTextFromServer[key];
-    //             label.className = "label";
-    //             form.appendChild(checkbox);
-    //             form.appendChild(label);
-    //             form.appendChild(document.createElement("br"));
-    //             linksToRemoveWrapper.appendChild(form);
-    //         }
-    //     }
-    // };
-    // xhttp.open("GET", '/hosts', true);
-    // xhttp.send();
     refreshSectionTwo();
 
 });
 
-
-
+// Adding event listener to section three
 btnLeftSection3.addEventListener("click", function() {
-    console.log("I am section Three");
     rightSection3.style.zIndex = ZIndex;
     ZIndex = ZIndex + 1;
 });
 
-
+// Adding event listener to section four
 btnLeftSection4.addEventListener("click", function() {
     console.log("I am section Four");
     rightSection4.style.zIndex = ZIndex;
@@ -105,6 +77,8 @@ btnLeftSection4.addEventListener("click", function() {
 
 
 // Function to validate link
+// Being a little bit honest
+// Copied this code from stackoverflow!!
 function validURL(str) {
     var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
         '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
